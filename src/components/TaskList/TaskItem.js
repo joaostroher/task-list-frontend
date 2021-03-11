@@ -60,8 +60,8 @@ function TaskItem({ task, onDeleteClick, onCheckChange }) {
 
   const uncheckedIcon = useMemo(() => {
     if (task.loadingToogle) return <CircularProgress size={24} />;
-    if (checkboxFocused) return <CheckCircleIcon />;
-    return <RadioButtonUncheckedIcon />;
+    if (checkboxFocused) return <CheckCircleIcon color="primary" />;
+    return <RadioButtonUncheckedIcon color="primary" />;
   }, [checkboxFocused, task.loadingToogle]);
 
   return (
